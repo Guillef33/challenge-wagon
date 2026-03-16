@@ -1,0 +1,269 @@
+/* =========================================================
+MASTER.CSS — WAGON TEST VERSION
+System: VW Typographic Scale
+Base reference: 1440px
+========================================================= */
+
+
+:root{
+  --lh-tight:1;
+  --lh-base:1.1;
+  --lh-loose:1.2;
+
+  --color-black:#141414;
+  --color-white:#FCF9EF;
+  --color-primary:#ED5C2F;
+}
+
+/* RESET */
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+
+/* =========================================================
+LAYOUT
+========================================================= */
+
+.container-i{
+  width:90%;
+  margin:auto;
+  max-width:90vw;
+}
+
+.flex-i{display:flex;flex-wrap:wrap;}
+.align-center{align-items:center;}
+.justify-between{justify-content:space-between;}
+.flex-column{flex-direction:column;}
+
+.gap-i{gap:1vw;}
+.gap-ii{gap:2vw;}
+
+.w-100{width:100%;}
+
+
+
+/* ===== HEADINGS ===== */
+
+.he-i,
+.he-i *,
+.he-ii,
+.he-ii *,
+.he-iii,
+.he-iii *,
+.he-iv,
+.he-iv *,
+.he-v,
+.he-v *,
+.he-vi,
+.he-vi *{
+  font-family: 'TayKari', sans-serif;
+}
+
+
+/* ===== BODY TEXT ===== */
+
+.bo-i,
+.bo-i *,
+.bo-ii,
+.bo-ii *,
+.bo-iii,
+.bo-iii *{
+  font-family: 'TAYAmaya', sans-serif;
+  font-weight: 400;
+}
+
+
+/* ===== SPECIAL TEXT ===== */
+
+.sp-i,
+.sp-i *,
+.sp-ii,
+.sp-ii *,
+.sp-iii,
+.sp-iii *{
+  font-family: 'TAYAmaya', sans-serif;
+  font-weight: 500;
+}
+
+
+/* ===== LINKS ===== */
+
+.link-i,
+.link-i *{
+  font-family: 'TAYAmaya', sans-serif;
+  font-weight: 500;
+}
+
+
+/* ===== BUTTONS ===== */
+
+.btn-i,
+.btn-i *{
+  font-family: 'TAYAmaya', sans-serif;
+  font-weight: 600;
+  letter-spacing:0.02em;
+  text-transform:uppercase;
+}
+
+/* =========================================================
+BUTTON
+========================================================= */
+
+.btn-i{
+  background:var(--color-black);
+  color:var(--color-white);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* =========================================================
+LINK
+========================================================= */
+
+.link-i{
+  position:relative;
+  display:inline-flex;
+  cursor:pointer;
+}
+
+.link-i:after{
+  content:'';
+  position:absolute;
+  left:0;
+  top:100%;
+  width:0;
+  height:2px;
+  background:var(--color-black);
+  transition:.35s;
+}
+
+.link-i:hover:after{
+  width:100%;
+}
+
+/* =========================================================
+BREAKPOINTS — TYPOGRAPHIC SYSTEM
+========================================================= */
+
+
+/* ===== XL (BASE REAL) ===== */
+@media (min-width:1200px){
+
+  .he-i,.he-i *{font-size:6.6vw;line-height:var(--lh-tight);}
+  .he-ii,.he-ii *{font-size:3.8vw;line-height:var(--lh-base);}
+  .he-iii,.he-iii *{font-size:3.3vw;line-height:var(--lh-base);}
+  .he-iv,.he-iv *{font-size:2.4vw;line-height:var(--lh-base);}
+  .he-v,.he-v *{font-size:2vw;line-height:var(--lh-loose);}
+  .he-vi,.he-vi *{font-size:1.6vw;line-height:var(--lh-base);}
+
+  .bo-i,.bo-i *{font-size:1.1vw;line-height:var(--lh-loose);}
+  .bo-ii,.bo-ii *{font-size:1.3vw;line-height:var(--lh-loose);}
+  .bo-iii,.bo-iii *{font-size:1.5vw;line-height:var(--lh-loose);}
+
+  .sp-i,.sp-i *{font-size:.9vw;line-height:var(--lh-tight);}
+  .sp-ii,.sp-ii *{font-size:1.1vw;line-height:var(--lh-base);}
+  .sp-iii,.sp-iii *{font-size:1.5vw;line-height:var(--lh-base);}
+
+  .link-i{font-size:1.1vw;}
+  .btn-i{padding:.9vw 1.6vw;font-size:1.1vw;}
+
+}
+
+
+/* ===== LG ===== */
+@media (max-width:1199px){
+
+  .he-i,.he-i *{font-size:7vw;}
+  .he-ii,.he-ii *{font-size:4.5vw;}
+  .he-iii,.he-iii *{font-size:4vw;}
+  .he-iv,.he-iv *{font-size:3.2vw;}
+  .he-v,.he-v *{font-size:2.6vw;}
+  .he-vi,.he-vi *{font-size:2.2vw;}
+
+  .bo-i,.bo-i *{font-size:1.8vw;}
+  .bo-ii,.bo-ii *{font-size:2vw;}
+  .bo-iii,.bo-iii *{font-size:2.2vw;}
+
+  .sp-i,.sp-i *{font-size:1.5vw;}
+  .sp-ii,.sp-ii *{font-size:1.7vw;}
+  .sp-iii,.sp-iii *{font-size:2vw;}
+
+  .link-i{font-size:1.8vw;}
+  .btn-i{padding:1.1vw 2vw;font-size:1.8vw;}
+
+}
+
+
+/* ===== MD ===== */
+@media (max-width:991px){
+
+  .he-i,.he-i *{font-size:9vw;}
+  .he-ii,.he-ii *{font-size:6vw;}
+  .he-iii,.he-iii *{font-size:5vw;}
+  .he-iv,.he-iv *{font-size:4.5vw;}
+  .he-v,.he-v *{font-size:3.8vw;}
+  .he-vi,.he-vi *{font-size:3vw;}
+
+  .bo-i,.bo-i *{font-size:2.6vw;}
+  .bo-ii,.bo-ii *{font-size:2.8vw;}
+  .bo-iii,.bo-iii *{font-size:3vw;}
+
+  .sp-i,.sp-i *{font-size:2.2vw;}
+  .sp-ii,.sp-ii *{font-size:2.4vw;}
+  .sp-iii,.sp-iii *{font-size:2.8vw;}
+
+  .link-i{font-size:2.6vw;}
+  .btn-i{padding:1.8vw 3vw;font-size:2.6vw;}
+
+}
+
+
+/* ===== SM ===== */
+@media (max-width:767px){
+
+  .he-i,.he-i *{font-size:12vw;}
+  .he-ii,.he-ii *{font-size:8vw;}
+  .he-iii,.he-iii *{font-size:7vw;}
+  .he-iv,.he-iv *{font-size:6vw;}
+  .he-v,.he-v *{font-size:5vw;}
+  .he-vi,.he-vi *{font-size:4vw;}
+
+  .bo-i,.bo-i *{font-size:3.8vw;}
+  .bo-ii,.bo-ii *{font-size:4vw;}
+  .bo-iii,.bo-iii *{font-size:4.2vw;}
+
+  .sp-i,.sp-i *{font-size:3vw;}
+  .sp-ii,.sp-ii *{font-size:3.4vw;}
+  .sp-iii,.sp-iii *{font-size:3.8vw;}
+
+  .link-i{font-size:3.5vw;}
+  .btn-i{padding:3vw;font-size:3.5vw;}
+
+}
+
+
+/* ===== XS ===== */
+@media (max-width:575px){
+
+  .he-i,.he-i *{font-size:14vw;}
+  .he-ii,.he-ii *{font-size:9vw;}
+  .he-iii,.he-iii *{font-size:8vw;}
+  .he-iv,.he-iv *{font-size:7vw;}
+  .he-v,.he-v *{font-size:6vw;}
+  .he-vi,.he-vi *{font-size:5vw;}
+
+  .bo-i,.bo-i *{font-size:4.5vw;}
+  .bo-ii,.bo-ii *{font-size:4.8vw;}
+  .bo-iii,.bo-iii *{font-size:5vw;}
+
+  .sp-i,.sp-i *{font-size:3.8vw;}
+  .sp-ii,.sp-ii *{font-size:4vw;}
+  .sp-iii,.sp-iii *{font-size:4.5vw;}
+
+  .link-i{font-size:4.2vw;}
+  .btn-i{padding:4vw;font-size:4.2vw;}
+
+}

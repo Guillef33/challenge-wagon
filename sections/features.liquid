@@ -1,0 +1,141 @@
+<section class="features-promo">
+    <div class="container-i flex-i flex-column align-center gap-ii text-center">
+        
+        <div class="he-ii w-100">
+            <h2 class="features-title">WHAT MAKES US DIFFERENT<br>THAN OTHER CRACKERS?</h2>
+        </div>
+
+        <div class="features-grid">
+            
+            <div class="feature-card card-mushroom flex-i flex-column align-center justify-center gap-i">
+                <img src="{{ 'icon-mushroom.png' | asset_url }}" alt="Mushroom Icon" class="feature-icon" width="60" height="60">
+                <h3 class="he-iv">FUNCTIONAL<br>MUSHROOM<br>FLOUR</h3>
+            </div>
+
+            <div class="feature-card card-allergens flex-i flex-column align-center justify-center gap-i">
+                <img src="{{ 'icon-allergens.png' | asset_url }}" alt="No Allergens Icon" class="feature-icon" width="60" height="60">
+                <h3 class="he-iv">MADE WITHOUT<br>ALL 9 MAJOR<br>ALLERGENS</h3>
+                <img src="{{ 'badge-blue.png' | asset_url }}" alt="Including Nuts, Gluten & Dairy" class="badge-blue" width="120" height="120">
+            </div>
+
+            <div class="feature-card card-olive flex-i flex-column align-center justify-center gap-i">
+                <img src="{{ 'icon-olive.png' | asset_url }}" alt="Olive Oil Icon" class="feature-icon" width="60" height="60">
+                <h3 class="he-iv">WE USE<br>OLIVE OIL</h3>
+            </div>
+
+            <div class="feature-card card-ingredients flex-i flex-column align-center justify-center gap-i">
+                <img src="{{ 'icon-ingredients.png' | asset_url }}" alt="Better Ingredients Icon" class="feature-icon" width="60" height="60">
+                <h3 class="he-iv">BETTER-<br>FOR-YOU<br>INGREDIENTS</h3>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+.features-promo {
+    background-color: #92C7EC;
+    padding: 10vh 0;
+    color: #1a4f3b;
+}
+
+.features-title {
+    margin: 0;
+    text-align: center;
+}
+
+.feature-card h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.features-grid {
+    width: 100%;
+    max-width: 1061px;
+    margin-top: 4%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.feature-card {
+    background-image: url('{{ "background-card.png" | asset_url }}');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding: 30px 10px;
+    min-height:305px;
+    text-align: center;
+}
+
+.feature-icon {
+    width: 72px;
+    height: 84px;
+    object-fit: cover;
+}
+
+.card-allergens {
+    position: relative;
+}
+
+.badge-blue {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem 1.5rem; 
+    }
+
+    .features-promo {
+    padding: 0vh 0;
+    }
+
+    .feature-card {
+        width: 100%; 
+        max-width: none; 
+        min-height: 240px;
+        padding: 15% 5%; 
+    }
+
+    .features-title {
+        font-size: 11vw;
+        margin: 8vh auto;
+        width: 70%;
+    }
+
+
+    .card-mushroom { order: 1; }
+    .card-olive { order: 2; }
+    .card-ingredients { order: 3; }
+    .card-allergens { order: 4; }
+
+    .badge-blue {
+        width: 130px;
+        height: auto;
+        right: -10%;
+        display: block;
+        position: absolute;
+        top: -25%;
+    }
+
+    .feature-icon {
+        max-width: 45px;
+    }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Features Promo",
+  "tag": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Features Promo",
+      "category": "Custom Elements"
+    }
+  ]
+}
+{% endschema %}
